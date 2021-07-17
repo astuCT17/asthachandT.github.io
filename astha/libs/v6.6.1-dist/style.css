@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding:0;
+}
+
+#js-map{
+    margin: 0;
+    padding:0;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.legend{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 1000;
+    background-color: #fff;
+    text-align: center;
+    max-height: 700px;
+    overflow-y: auto;
+    box-shadow: 7px 2px 7px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 7px 2px 7px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 2px 7px 0px rgba(0,0,0,0.75);  
+}
+
+.layer-switcher {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+}
+
+

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title> About kathmandu University </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <body style="background-color:rgb(206, 176, 230);">
+
+
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/6 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<h2>Automatic Slideshow</h2>
+<p>Change image every 3 seconds:</p>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 6</div>
+  <img src="assets/img/ku1.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 6</div>
+  <img src="assets/img/ku2.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 6</div>
+  <img src="assets/img/ku3.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 6</div>
+  <img src="assets/img/ku4.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 /6</div>
+  <img src="assets/img/ku5.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 6</div>
+  <img src="assets/img/ku6.jpg" style="width:100%">
+  
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Serenity - v2.2.1
+  * Template URL: https://bootstrapmade.com/serenity-bootstrap-corporate-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="index.html">ASTHA</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/ku.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li  class="active"><a href="KU.html"> About KU</a></li>
+          <li><a href="Tutorial.html">Tutorial</a></li>
+          <li><a href="Map.html">Map</a></li>
+          <li><a href="contact.html">Contact</a></li>
+
+          
+          
+          
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="breadcrumb-hero">
+        <div class="container">
+          <div class="breadcrumb-hero">
+            
+            <p> <div class="navbar navbar-fixed-top custom-navbar" role="navigation">
+              <div class="container">
+    
+                   <!-- navbar header -->
+                   
+                   <div class="navbar-header">
+
+                    <div class="col-md-12 col-sm-12">
+                                      
+                             <div class="color-black experience-thumb">
+                             <div class="wow fadeInUp section-title">
+                              <a class="navbar-brand" target="_blank" href="http://ku.edu.np/"><img src="ku.png" alt="Logo of KU"
+                                style="width:100px;height:100px;"></a>
+                                 <h1><span style="color:black;font-weight:bold">KATHMANDU UNIVERSITY</span></h1> 
+                                  <p class="color-black">"To Provide Quality Education for Leadership"</p>
+                                  <p><span style="color:black;font-weight:bold">VISION STATEMENT </span></p>
+                                  <p class="color-black">"To become a world class university devoted to bringing knowledge and Technology to the service of Mankind"</p>
+                                  <p><span style="color:black;font-weight:bold">ABOUT KATHMANDU UNIVERSITY</span></p>
+                                  <p class="color-black">Kathmandu University is an autonomous,not-for-profit,non - government institution dedicated to maintain high standards of academic excellence.
+                                  It is committed to develop leaders in professional areas through quality education.</p>
+                                  
+                                            <div class="row">
+                                              <div class="col-md-offset-2 col-md-10 col-sm-12">
+                                                   <div class="wow fadeInUp color-black service-thumb" data-wow-delay="0.4s">
+                          
+                                                        <h2>Bachelor of Geomatic Engineering - Kathmandu UnIversity</h2>
+                                                        <p class="color-black" class="wow fadeInUp">Geomatics (Surveying) Engineering Technology provides training in the collection, analysis, storage,
+                                                        distribution and application of spatial or three-dimensional data used in land development. It is is a modern discipline, which integrates
+                                                        acquisition, modeling, analysis, and management of spatially referenced data, i.e. data identified according to their locations.Based on the 
+                                                        scientific framework of geodesy, it uses terrestrial, marine, airborne, and satellite-based sensors to acquire spatial and other data.
+                                                        This program is running under the memorandum of understanding between school of Engineering Kathmandu University and Land Management Training Center (LMTC),
+                                                        Dhulikhel with the decision of Ministry of Land Reforms,Government of Nepal. Under this agreement Ministry of Land Reform will provide financial assistance to run the program.</p>
+                          
+                                                       
+                                                        <p class="color-black" class="wow fadeInUp">To know more about this program,<a target="_blank" href="http://ku.edu.np/dcge/">click here.</a></p>
+                                                   </div>
+                          
+                                              </div>
+                                         </div>
+                
+                             </div>
+                
+                        </div>
+                   </div>
+                
+                            
+                   </div>
+
+                   
+                   
+    
+              </div>
+         </div> 
+         </p>
+        </div>
+      </div>
+      
+    </section><!-- End Breadcrumbs -->
+
+    
+          
+          
+
+          
+                 
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>ASTHA</h3>
+            </div>
+
+
+            
+
+         </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Link</h4>
+            <ul>
+              <li><a href="http://ku.edu.np/">KU site</a></li>
+              
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Me</h4>
+            <p>
+              Astha Chand <br>
+              Mahendranagar, kanchanpur<br>
+              Nepal <br>
+              <strong>Phone:</strong> 9848975691<br>
+              <strong>Email:</strong> asthachand123@gmail.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="https://www.facebook.com/ashree.chand" class="facebook"><i class="icofont-facebook"></i></a>
+              <a href="https://www.instagram.com/astha.thakuri17/" class="instagram"><i class="icofont-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/astha-chand-60412b178/" class="linkedin"><i class="icofont-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>ASTHA CHAND</span></strong>. All Rights Reserved<Br>
+          Designed By Astha Chand</br> 
+      </div>
+      
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

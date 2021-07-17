@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>open layers web map</title>
+   <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./libs/v6.6.1-dist/ol.css">
+    <link rel="stylesheet" href="./libs/v6.6.1-dist/ol-layerswitcher.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./libs/v6.6.1-dist/style.css">
+
+</head>
+<body>
+
+    <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="index.html">MAPS</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/ku.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+
+          
+          <li><a href="KU.html"> About KU</a></li>
+          <li><a href="Tutorial.html">Tutorial</a></li>
+          <li  class="active"><a href="Map.html">Map</a></li>
+          <li><a href="contact.html">Contact</a></li>
+
+         
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+  
+    <div id='js-map' >
+        <div class="legend">
+            <h5>SRTM DEM (Elevation)</h5>
+            <img src="http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=gis:NepalSRTM90m" alt="">
+            
+            <h5 class="mt-3">Landcover</h5>
+            <img src="http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=webgis:LC_2010" alt="">
+        
+        </div>
+    </div>
+
+           
+    <script src='./libs/v6.6.1-dist/ol.js'></script>
+    <script src='./libs/v6.6.1-dist/ol-layerswitcher.js'></script>
+    
+</body>
+</html>
+
+<script>
+
+
+
+// baseMapGroup 
+var baseMapGroup = new ol.layer.Group({
+    title: 'Choose the base map',
+    layers: [
+        new ol.layer.Tile({
+            title: 'Bing Maps',
+            type: 'base',
+            visible: false,
+            source: new ol.source.BingMaps({
+                key: 'AuuAUPUJCt9KcDBOEF8g1BF-2bliglDNizh5vuGg6JTO1HAULoA10A6XOUn78BmZ',
+                imagerySet: 'AerialWithLabelsOnDemand'
+            })
+        }),
+        new ol.layer.Tile({
+            title: 'Open Street Maps',
+            type: 'base',
+            visible: true,
+            source: new ol.source.OSM()
+        })
+    ]
+});
+
+
+
+
+// rasterMapGroup
+var rasterMapGroup =  new ol.layer.Group({
+    title: 'Raster Data',
+    layers: [
+        new ol.layer.Image({
+            title: 'NEPAL SRTM DEM',
+            visible: true,
+            source: new ol.source.ImageWMS({
+                url: 'http://localhost:8080/geoserver/wms',
+                params: {
+                    'LAYERS': 'gis:NepalSRTM90m'
+                },
+                serverType: 'geoserver',
+            })
+        }),
+
+        new ol.layer.Image({
+            title: 'Landcover Map Of Nepal',
+            visible: false,
+            source: new ol.source.ImageWMS({
+                url: 'http://localhost:8080/geoserver/wms',
+                params: {
+                    'LAYERS': 'webgis:LC_2010'
+                },
+                serverType: 'geoserver',
+            })
+        }),
+    ]
+});
+
+    const map = new ol.Map({
+        view: new ol.View({
+             center: ol.proj.transform([84.08906, 28.41069], 'EPSG:4326', 'EPSG:3857'),
+            zoom:7
+        }),
+        layers: [baseMapGroup, rasterMapGroup],
+         target: 'js-map'
+        
+    })
+
+    var layerSwitcher = new ol.control.LayerSwitcher ({
+        // tipLable: "Legend",
+        reverse: true,
+          groupSelectStyle:'group',
+        
+    });
+    map.addControl(layerSwitcher);
+
+</script>
